@@ -6,12 +6,12 @@ import 'package:url_launcher/url_launcher.dart';
 class ClickableImage extends StatelessWidget {
   final double width;
   final String imagem;
-  final redirect;
+  final String redirect;
 
   const ClickableImage({
     required this.width,
     required this.imagem,
-    this.redirect,
+    required this.redirect,
     super.key,
   });
 
@@ -19,7 +19,7 @@ class ClickableImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
         onTap: () {
-          launchUrl(redirect);
+          launchUrl(Uri(host: redirect));
         },
         child: (Column(children: [
           Image.asset(

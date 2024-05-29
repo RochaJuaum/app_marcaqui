@@ -28,15 +28,18 @@ class SocialMediaScreen extends StatelessWidget {
                           },
                           icon: const Icon(Icons.arrow_back_sharp)),
                     ),
-                    Image.asset(
-                      'assets/images/logo_tatoo2.png',
-                      width: 150,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        'assets/images/logo_tatoo2.png',
+                        width: 150,
+                      ),
                     )
                   ],
                 ),
               ),
               const Padding(
-                padding: EdgeInsets.only(top: 30, left: 25),
+                padding: EdgeInsets.only(top: 30, left: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,7 +58,7 @@ class SocialMediaScreen extends StatelessWidget {
                 ),
               ),
               const Padding(
-                padding: const EdgeInsets.only(top: 30, left: 25),
+                padding: const EdgeInsets.only(top: 30, left: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,

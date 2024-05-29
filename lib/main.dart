@@ -1,4 +1,5 @@
 import 'package:app_marcaqui/screens/arts_screen.dart';
+import 'package:app_marcaqui/screens/chat_screen.dart';
 import 'package:app_marcaqui/screens/main_screen.dart';
 import 'package:app_marcaqui/screens/mark_screen.dart';
 import 'package:app_marcaqui/screens/recoverPassword_screen.dart';
@@ -46,6 +47,10 @@ final router = GoRouter(
     GoRoute(
       path: '/socialmediascreen',
       builder: (context, state) => const SocialMediaScreen(),
+    ),
+    GoRoute(
+      path: '/chatscreen',
+      builder: (context, state) => ChatScreen(),
     )
   ],
   initialLocation: '/',

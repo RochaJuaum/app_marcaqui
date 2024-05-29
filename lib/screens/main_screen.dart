@@ -4,6 +4,7 @@ import 'package:app_marcaqui/consts/spacing_const.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:go_router/go_router.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -13,7 +14,14 @@ class MainScreen extends StatelessWidget {
     return BaseScaffold(
         body: SingleChildScrollView(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          IconButton(
+              onPressed: () {
+                context.go('/');
+              },
+              icon: const Icon(Icons.arrow_back_sharp)),
           Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -23,7 +31,7 @@ class MainScreen extends StatelessWidget {
                       bottom: SpacingConst.baseSpacing * 3),
                   child: Image.asset(
                     "assets/images/logo2.png",
-                    width: 300,
+                    width: 230,
                   ),
                 )
               ]),
@@ -40,7 +48,7 @@ class MainScreen extends StatelessWidget {
                       name: 'Horários disponíveis',
                       width: 150,
                       height: 150,
-                      imagem: '/assets/images/botao1.png',
+                      imagem: '/images/botao1.png',
                     ),
                   ),
                   ButtonSquare(
@@ -48,7 +56,7 @@ class MainScreen extends StatelessWidget {
                     name: 'Artes disponíveis',
                     width: 150,
                     height: 150,
-                    imagem: '/assets/images/botao2.png',
+                    imagem: '/images/botao2.png',
                   ),
                 ]),
           ),
@@ -59,11 +67,11 @@ class MainScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(right: SpacingConst.baseSpacing),
                   child: ButtonSquare(
-                    redirect: '/',
+                    redirect: '/chatscreen',
                     name: 'Chat',
                     width: 150,
                     height: 150,
-                    imagem: '/assets/images/botao3.png',
+                    imagem: '/images/botao3.png',
                   ),
                 ),
                 ButtonSquare(
@@ -71,7 +79,7 @@ class MainScreen extends StatelessWidget {
                   name: 'Redes sociais',
                   width: 150,
                   height: 150,
-                  imagem: '/assets/images/botao4.png',
+                  imagem: '/images/botao4.png',
                 ),
               ]),
         ],

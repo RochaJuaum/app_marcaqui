@@ -28,9 +28,14 @@ class MarkScreen extends StatelessWidget {
                           },
                           icon: const Icon(Icons.arrow_back_sharp)),
                     ),
-                    Image.asset(
-                      'assets/images/logo_tatoo2.png',
-                      width: 150,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/images/logo_tatoo2.png',
+                          width: 150,
+                        ),
+                      ),
                     )
                   ],
                 ),
